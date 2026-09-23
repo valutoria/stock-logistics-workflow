@@ -20,8 +20,8 @@ class SaleOrderLine(models.Model):
     @api.depends(
         "move_ids.state",
         "move_ids.scrap_id",
-        "move_ids.product_uom_qty",
-        "move_ids.product_uom",
+        "move_ids.quantity",
+        "move_ids.uom_id",
     )
     def _compute_qty_returned(self):
         for line in self:
@@ -31,8 +31,8 @@ class SaleOrderLine(models.Model):
                 for move in incoming_moves:
                     if move.state != "done":
                         continue
-                    qty += move.product_uom._compute_quantity(
-                        move.product_uom_qty,
+                    qty += move.uom_id._compute_quantity(
+                        move.quantity,
                         line.product_uom_id,
                         rounding_method="HALF-UP",
                     )
