@@ -19,7 +19,7 @@ class SaleOrderLine(models.Model):
 
     @api.depends(
         "move_ids.state",
-        "move_ids.scrap_id",
+        "move_ids.is_scrap",
         "move_ids.quantity",
         "move_ids.uom_id",
     )

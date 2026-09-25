@@ -2,26 +2,12 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, models
-from odoo.exceptions import UserError
 
 
-class ReturnPickingLine(models.TransientModel):
-    _inherit = "stock.return.picking.line"
+class StockMove(models.Model):
+    _inherit = "stock.move"
 
-    @api.constrains("quantity")
-    def _check_quantity(self):
-        for line in self:
-            restrict_return_qty = (
-                line.move_id.picking_id.picking_type_id.restrict_return_qty
-            )
-
-            qty = line.get_returned_restricted_quantity(line.move_id)
-
-            if restrict_return_qty and line.quantity > qty:
-                raise UserError(
-                    self.env._("Return more quantities than delivered is not allowed.")
-                )
-
+    @api.model
     def get_returned_restricted_quantity(self, stock_move):
         """This function is created to know how many products
         have the person who tries to create a return picking
