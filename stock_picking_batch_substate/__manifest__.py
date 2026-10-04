@@ -10,7 +10,7 @@
     "license": "AGPL-3",
     "depends": [
         # odoo
-        "stock_picking_batch",
+        "stock",
         # OCA/server-ux
         "base_substate",
     ],

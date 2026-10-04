@@ -10,7 +10,7 @@
     "website": "https://github.com/OCA/stock-logistics-workflow",
     "license": "AGPL-3",
     "category": "Inventory",
-    "depends": ["stock_picking_batch"],
+    "depends": ["stock"],
     "data": [
         "views/res_partner.xml",
     ],

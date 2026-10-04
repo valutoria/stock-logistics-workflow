@@ -10,7 +10,7 @@
     "category": "Warehouse Management",
     "depends": ["stock"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/reason_code_view.xml",
         "views/stock_scrap_views.xml",
         "views/stock_move_views.xml",

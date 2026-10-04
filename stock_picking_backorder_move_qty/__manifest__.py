@@ -16,7 +16,7 @@
         "stock",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "wizard/stock_backorder_confirmation.xml",
     ],
 }

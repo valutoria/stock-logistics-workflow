@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,operation,domain
+access_stock_move_valuation_usage,access_stock_move_valuation_usage,model_stock_move_valuation_usage,account.group_account_user,cru,

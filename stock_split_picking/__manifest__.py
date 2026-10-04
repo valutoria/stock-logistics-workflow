@@ -14,7 +14,7 @@
     "website": "https://github.com/OCA/stock-logistics-workflow",
     "depends": ["stock"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "wizards/stock_split_picking.xml",
         "views/stock_partial_picking.xml",
     ],

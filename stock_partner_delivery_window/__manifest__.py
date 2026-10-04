@@ -15,7 +15,7 @@
     ],
     "maintainers": ["jbaudoux"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/res_partner.xml",
         "views/stock_picking_view.xml",
     ],

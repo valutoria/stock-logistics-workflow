@@ -10,10 +10,10 @@
     "development_status": "Mature",
     "maintainers": ["gurneyalex", "carlosdauden", "i-vyshnevska"],
     "category": "Warehouse Management",
-    "depends": ["stock_picking_batch", "stock_delivery"],
+    "depends": ["stock", "stock_delivery"],
     "website": "https://github.com/OCA/stock-logistics-workflow",
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/batch_picking_actions_server.xml",
         "views/stock_batch_picking.xml",
         "views/product_template_views.xml",

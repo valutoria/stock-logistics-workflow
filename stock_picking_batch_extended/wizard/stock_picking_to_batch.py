@@ -190,5 +190,5 @@ class StockPickingToBatch(models.TransientModel):
             )
             action["domain"] = [("id", "in", batch_pickings.ids)]
         else:
-            action = batch_pickings.get_formview_action()
+            action = batch_pickings.get_record_default_action()
         return action

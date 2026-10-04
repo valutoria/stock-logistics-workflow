@@ -12,7 +12,7 @@
     "website": "https://github.com/OCA/stock-logistics-workflow",
     "depends": ["sale", "stock_account_product_run_fifo_hook"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "security/ir_rule.xml",
         "views/stock_move_valuation_usage_views.xml",
         "views/stock_move_views.xml",
